@@ -1,205 +1,244 @@
-<!DOCTYPE html>
-<html>
-  <head>
-     
-    <meta charset="UTF-8">
-    <title>忱铭随笔</title>
-    <link rel="shortcut icon" href="/static/img/icon.png">
-    <link rel="icon" href="/static/img/icon.png" sizes="192x192"/>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>忱铭随笔</title><meta name="author" content="ChenMing"><meta name="copyright" content="ChenMing"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="忱铭随笔。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="忱铭随笔">
+<meta property="og:url" content="https://chenming.site/index.html">
+<meta property="og:site_name" content="忱铭随笔">
+<meta property="og:description" content="忱铭随笔。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/104653254?v=4">
+<meta property="article:author" content="ChenMing">
+<meta property="article:tag" content="忱铭随笔, 写作, 生活感悟, 网志, 博客, blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/104653254?v=4"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chenming.site/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '忱铭随笔',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-02-20 20:40:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
     
-<link rel="stylesheet" href="/static/kico.css">
-<link rel="stylesheet" href="/static/hingle.css">
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
 
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
 
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
-    <meta property="og:site_name" content="忱铭随笔">
-    <meta property="og:title" content=""/>
+        document.head.appendChild(script)
+      })
     
-    <style>body:before{ content: ''; background-image: url(https://baotangguo.cn:8081/) }</style>
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
     
-<meta name="generator" content="Hexo 6.3.0"></head>
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/104653254?v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="忱铭随笔"><span class="site-name">忱铭随笔</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2024/02/18/about/" title="我是谁？"><img class="post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我是谁？"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/02/18/about/" title="我是谁？"><i class="fas fa-thumbtack sticky"></i>我是谁？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-18T12:49:13.000Z" title="发表于 2024-02-18 20:49:13">2024-02-18</time></span></div><div class="content">你好！我是Chen，一名喜欢上网的学生。欢迎来到我的blog。我是一位发烧友，对玩机有着浓厚的兴趣。在互联网的探索之旅十分令人难忘，我在这个互联网中获得了一些个人的见解。
+现阶段目前，我还处于自己的学习和成长的阶段。虽然我还未步入职场，但我在不断地拓展自己的知识和技能。我对未来充满了憧憬和期待，并在日常生活中积极参与课外活动，以丰富自己的经验。
+我的爱好在学业之余，我热衷于刷机对智能设备进行定制优化，涉及 Qualcomm Snapdragon 、MediaTek 甚至 Huawei Kirin 等处理器。你经常能在酷安发现我的探索足迹。我对各种智能设备都保持着浓厚的兴趣，深度挖掘和优化智能设备，感受科技的魅力。除了这种高度技术性的优化，我还对一切可爱的事物充满喜爱。
+联系方式如果有任何问题或想与我联系，可以随时在社交媒体上与我联系：
 
-  <body>
-    <header>
-    <div class="head-title">
-        <h4>忱铭随笔</h4>
-    </div>
-    <div class="head-action">
-        <div class="toggle-btn"></div>
-        <div class="light-btn"></div>
-        <div class="search-btn"></div>
-    </div>
-    <form class="head-search" method="post">
-        <input type="text" name="s" placeholder="搜索什么？">
-    </form>
-    <nav class="head-menu">
-        <a href="/">首页</a>
-        <div class="has-child">
-            <a>分类</a>
-            <div class="sub-menu">
-                <a class="category-link" href="/categories/test/">test</a>
+A
+B
+C
+
+或者通过邮件联系我：
+
+&#x65;&#109;&#x61;&#105;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#109;。
+
+推荐 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/02/18/donation/" title="致读者"><img class="post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="致读者"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/02/18/donation/" title="致读者"><i class="fas fa-thumbtack sticky"></i>致读者</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-18T13:07:30.000Z" title="发表于 2024-02-18 21:07:30">2024-02-18</time></span></div><div class="content">感谢您的支持！您好亲爱的读者，
+感谢您访问我的博客并阅读我的文章。如果这里的内容对您有所帮助或启发，我想邀请您考虑通过捐赠来支持我的创作。您的慷慨将帮助我维持这个博客并继续分享内容。
+捐赠的理由？
+🌟 支持我： 您的捐赠是对我的认可，是我创作的动力之一。
+💡 促进内容质量： 捐赠可以帮助我提高博客的质量，以便为您提供更丰富的内容。
+🚀 推动博客发展： 您的支持将有助于博客的不断改进和持续发展，使其更好地满足您的期望。
+
+如何捐赠？感谢您考虑支持我。以下是一些捐赠选项：
+
+1： 微信支付
+2： 支付宝
+
+或直接扫描以下二维码，用您的爱心支持创作：
+
+
+
+微信支付
+支付宝
+
+
+
+
+
+
+
+您的支持是我的动力！再次感谢您的光临和支持。无论您捐赠与否，我都感到非常感激。如果您有任何想法或建议，也欢迎与我分享。
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/02/20/Post1/" title="【热门】iEnglish4平板思路"><img class="post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【热门】iEnglish4平板思路"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/02/20/Post1/" title="【热门】iEnglish4平板思路">【热门】iEnglish4平板思路</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-20T08:13:45.000Z" title="发表于 2024-02-20 16:13:45">2024-02-20</time></span></div><div class="content">*本文系开发文档，Chen仅做了部分补充 
+前言免责声明本教程旨在分享刷机经验和技术知识，帮助读者自行定制设备以更好地满足个人需求。由于该教程的特殊性，任何人都应该了解以下事项：
+
+1.相关风险： 刷机可能引发意外情况，包括但不限于数据丢失、设备故障等。在阅读本文前，请确保对此充分理解并自愿承担相关风险。
+
+2.官方支持： 刷机可能导致 iEnglish4 学习平板 失去托普郎宁（北京）教育科技有限公司提供的官方支持。在刷机之前，请考虑这可能会对设备的保修和官方软件更新造成影响。
+
+3.法律责任：  本教程并未包括任何对托普郎宁（北京）教育科技有限公司“iEng英语模拟系统”进行破解或类似操作的内容。笔者郑重声明，对于读者在刷机过程中可能产生的任何法律责任，笔者概不负责。
+
+4.相关数据： 由于笔者技术有限，在第一次刷机时 iEnglish4 学习平板 上的数据将全部丢失，笔者对此概不负责。
+
+
+在根据此教程进行刷机操作前，请确保已阅读并理解上述声明，并同意自行承担相关风险和责任。
+提示
+下载工具集配置电脑（笔记末尾）
+建议配置完环境后重启一次电脑
+本文所指
+
+准备Win10&#x2F ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/02/19/test%E6%96%87%E7%AB%A02/" title="智能电脑：融合科技与现代的未来之源"><img class="post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智能电脑：融合科技与现代的未来之源"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/02/19/test%E6%96%87%E7%AB%A02/" title="智能电脑：融合科技与现代的未来之源">智能电脑：融合科技与现代的未来之源</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-19T04:13:08.000Z" title="发表于 2024-02-19 12:13:08">2024-02-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/test/">test</a></span></div><div class="content">*本文系测试文章，由ChatGPT生成，内容仅供参考！
+
+智能电脑在当今科技潮流中扮演着至关重要的角色。随着技术的飞速发展，智能电脑不仅是我们工作和学习的得力助手，更是科技与现代风格完美融合的象征。
+科技的威力智能电脑是科技进步的明证。强大的处理器、高效的存储系统、智能化的操作系统，这些技术突破将电脑推向了一个新的高度。无论是进行复杂的数据分析还是畅玩高性能游戏，智能电脑都展现出强大的计算能力，为用户提供了更加便捷、高效的体验。
+设计的现代感除了强大的技术配置，智能电脑在设计上也充满了现代感。轻薄的机身、时尚的金属材质、全面屏设计，这些都是现代电脑设计的典范。现代风格的设计不仅注重外观的美感，更追求简洁、高效的使用体验。
+数字生活的引领者智能电脑在数字生活中扮演着引领者的角色。从远程办公到虚拟现实体验，智能电脑为用户提供了全新的数字化体验。现代人的生活离不开电脑，而智能电脑则以其多功能性和高度可定制性成为现代生活的不可或缺的一部分。
+未来愿景随着科技的不断发展，智能电脑的未来充满了无限可能。更快速的处理器、更智能的人工智能、更先进的互联技术，这些都将成为未来智能电脑的发展方向。而现代风 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/02/18/test%E6%96%87%E7%AB%A01/" title="智能手机：科技风潮中的时尚利器"><img class="post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智能手机：科技风潮中的时尚利器"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/02/18/test%E6%96%87%E7%AB%A01/" title="智能手机：科技风潮中的时尚利器">智能手机：科技风潮中的时尚利器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-18T08:44:27.000Z" title="发表于 2024-02-18 16:44:27">2024-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/test/">test</a></span></div><div class="content">*本文系测试文章，由ChatGPT生成，内容仅供参考！
+
+智能手机已经成为我们日常生活中不可或缺的一部分。随着科技的不断进步，手机不仅仅是通讯工具，更是一种时尚的体现。在这个科技风潮中，智能手机以其创新设计和强大功能成为了时尚利器。
+科技的魅力科技的不断演进给智能手机带来了无限可能。强大的处理能力、高清的摄像头、智能化的操作系统，这些技术突破让手机变得更加智能化和多功能化。我们的生活得以更加便捷，而这也使得智能手机在科技爱好者中变得越来越受欢迎。
+设计的艺术除了强大的技术配置，智能手机在设计上也有着引人注目的艺术风格。轻薄的机身、玻璃背板、全面屏设计，这些都展示了手机制造商在设计上的用心。蓝色调的机身更是给手机增添了一份时尚感，使其成为了一件艺术品。
+摄影的新时代随着智能手机摄像头的不断升级，我们进入了摄影的新时代。从日常的拍照到专业级的摄影，智能手机已经可以满足各种摄影需求。而蓝色的机身在拍摄时更显得时尚别致，使每一张照片都变得更加引人入胜。
+未来展望随着科技的不断发展，智能手机的未来将更加令人期待。更强大的处理器、更先进的摄像技术、更智能的人工智能助手，这些都将成为未来智能手机的发 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/02/18/hello-world/" title="Hello World"><img class="post-bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/02/18/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-18T08:20:37.396Z" title="发表于 2024-02-18 16:20:37">2024-02-18</time></span></div><div class="content">*本文系开发文档，Chen仅做了部分补充 Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.欢迎来到 Hexo ！这是你的第一篇文章。有关详细信息，请查看文档。如果你在使用 Hexo 时遇到任何问题，你可以在故障排除中找到答案，也可以在 GitHub 上问我。
+Quick Start 快速入门Create a new post 创建新帖子
+1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server 启动预览
+1$ hexo s
+
+More info: Server
+Generate static files 生成页面
+1$ hexo g
+
+More info: Generating ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/104653254?v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ChenMing</div><div class="author-info__description">忱铭随笔。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:chen@chenming.site" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/02/20/Post1/" title="【热门】iEnglish4平板思路"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【热门】iEnglish4平板思路"/></a><div class="content"><a class="title" href="/2024/02/20/Post1/" title="【热门】iEnglish4平板思路">【热门】iEnglish4平板思路</a><time datetime="2024-02-20T08:13:45.000Z" title="发表于 2024-02-20 16:13:45">2024-02-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/19/test%E6%96%87%E7%AB%A02/" title="智能电脑：融合科技与现代的未来之源"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智能电脑：融合科技与现代的未来之源"/></a><div class="content"><a class="title" href="/2024/02/19/test%E6%96%87%E7%AB%A02/" title="智能电脑：融合科技与现代的未来之源">智能电脑：融合科技与现代的未来之源</a><time datetime="2024-02-19T04:13:08.000Z" title="发表于 2024-02-19 12:13:08">2024-02-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/18/donation/" title="致读者"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="致读者"/></a><div class="content"><a class="title" href="/2024/02/18/donation/" title="致读者">致读者</a><time datetime="2024-02-18T13:07:30.000Z" title="发表于 2024-02-18 21:07:30">2024-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/18/about/" title="我是谁？"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我是谁？"/></a><div class="content"><a class="title" href="/2024/02/18/about/" title="我是谁？">我是谁？</a><time datetime="2024-02-18T12:49:13.000Z" title="发表于 2024-02-18 20:49:13">2024-02-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/18/test%E6%96%87%E7%AB%A01/" title="智能手机：科技风潮中的时尚利器"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智能手机：科技风潮中的时尚利器"/></a><div class="content"><a class="title" href="/2024/02/18/test%E6%96%87%E7%AB%A01/" title="智能手机：科技风潮中的时尚利器">智能手机：科技风潮中的时尚利器</a><time datetime="2024-02-18T08:44:27.000Z" title="发表于 2024-02-18 16:44:27">2024-02-18</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
             </div>
-        </div>
-        
-            <a href="/2024/02/18/about/">关于我</a>
-        
-            <a href="/2024/02/18/donation/">捐赠</a>
-        
-    </nav>
-</header>
-
-    <main>
-    <div class="wrap min">
-        <section class="home-title">
-            <h1>忱铭随笔</h1>
-            <span>忱铭随笔。</span>
-            
-    <div class="home-social">
-    
-        <a target="_blank" rel="noopener" href="https://github.com/Dreamer-Paul" title="Github">
-        
-            <i class="fa fa-github"></i>
-        
-        </a>
-    
-        <a target="_blank" rel="noopener" href="https://paul.ren" title="首页">
-        
-            <i class="fa fa-home"></i>
-        
-        </a>
-    
-    </div>
-
-
-        </section>
-        <section class="home-posts">
-    
-    <div class="post-item">
-        <h2>
-            <a href="/2024/02/18/about/">我是谁？</a>
-        </h2>
-    
-        <p>你好！我是Chen，一名喜欢上网的学生。欢迎来到我的blog。</p>
-    
-        <div class="post-meta">
-            <time class="date">2024.02.18</time>
-            
-            
-                <span class="tags"><a class="-none-link" href="/tags/%E7%BD%AE%E9%A1%B6/" rel="tag">置顶</a></span>
-            
-        </div>
-    </div>
-    
-    <div class="post-item">
-        <h2>
-            <a href="/2024/02/18/donation/">致读者</a>
-        </h2>
-    
-        <p>感谢您的支持！您好亲爱的读者，
-感谢您访问我的博客并阅读我的文章。</p>
-    
-        <div class="post-meta">
-            <time class="date">2024.02.18</time>
-            
-            
-                <span class="tags"><a class="-none-link" href="/tags/%E7%BD%AE%E9%A1%B6/" rel="tag">置顶</a></span>
-            
-        </div>
-    </div>
-    
-    <div class="post-item">
-        <h2>
-            <a href="/2024/02/19/test%E6%96%87%E7%AB%A02/">智能电脑：融合科技与现代的未来之源</a>
-        </h2>
-    
-        <p>*本文系测试文章，由ChatGPT生成，内容仅供参考！</p>
-    
-        <div class="post-meta">
-            <time class="date">2024.02.19</time>
-            
-                <span class="category"><a class="category-link" href="/categories/test/">test</a></span>
-            
-            
-                <span class="tags"><a class="-none-link" href="/tags/ChatGPT/" rel="tag">ChatGPT</a></span>
-            
-        </div>
-    </div>
-    
-    <div class="post-item">
-        <h2>
-            <a href="/2024/02/18/test%E6%96%87%E7%AB%A01/">智能手机：科技风潮中的时尚利器</a>
-        </h2>
-    
-        <p>*本文系测试文章，由ChatGPT生成，内容仅供参考！</p>
-    
-        <div class="post-meta">
-            <time class="date">2024.02.18</time>
-            
-                <span class="category"><a class="category-link" href="/categories/test/">test</a></span>
-            
-            
-                <span class="tags"><a class="-none-link" href="/tags/ChatGPT/" rel="tag">ChatGPT</a></span>
-            
-        </div>
-    </div>
-    
-    <div class="post-item">
-        <h2>
-            <a href="/2024/02/18/hello-world/">Hello World</a>
-        </h2>
-    
-        <p>*本文系开发文档，Chen仅做了部分补充 </p>
-    
-        <div class="post-meta">
-            <time class="date">2024.02.18</time>
-            
-            
-        </div>
-    </div>
-    
-</section>
-
-        <section class="page-navigator">
-            <span class="page-number current">1</span>
-        </section>
-    </div>
-</main>
-
-    <footer>
-    <div class="buttons">
-        <a class="to-top" href="#"></a>
-    </div>
-    <div class="wrap min">
-        <section class="widget">
-            <div class="row">
-                <div class="col-m-4">
-                    <h3 class="title-recent">最新文章：</h3>
-                    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2024/02/19/test%E6%96%87%E7%AB%A02/">智能电脑：融合科技与现代的未来之源</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/02/18/donation/">致读者</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/02/18/about/">我是谁？</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/02/18/test%E6%96%87%E7%AB%A01/">智能手机：科技风潮中的时尚利器</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/02/18/hello-world/">Hello World</a></li></ul>
-                </div>
-                <div class="col-m-4">
-                    <h3 class="title-date">时光机：</h3>
-                    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li></ul>
-                </div>
-                <div class="col-m-4">
-                    <h3 class="title-tags">标签云：</h3>
-                    <a href="/tags/ChatGPT/" style="font-size: 10px;">ChatGPT</a> <a href="/tags/%E7%BD%AE%E9%A1%B6/" style="font-size: 10px;">置顶</a>
-                </div>
-            </div>
-        </section>
-        <section class="sub-footer">
-            <p>© 2024 <a href="/">忱铭随笔</a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
-        </section>
-    </div>
-</footer>
-
-
-<script src="/static/kico.js"></script>
-<script src="/static/hingle.js"></script>
-
-
-<script>var hingle = new Paul_Hingle({"copyright":true,"night":true});</script>
-
-  </body>
-</html>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/test/"><span class="card-category-list-name">test</span><span class="card-category-list-count">2</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E7%BD%AE%E9%A1%B6/" style="font-size: 1.1em; color: #999">置顶</a> <a href="/tags/ChatGPT/" style="font-size: 1.1em; color: #999">ChatGPT</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">二月 2024</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-02-20T12:40:00.065Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By ChenMing</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+<a href="https://icp.gov.moe/?keyword=20240669" target="_blank">萌ICP备20240669号</a>
+<a target="_blank" rel="noopener" href="http://www.miitbeian.gov.cn/">无ICP备</a> </div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

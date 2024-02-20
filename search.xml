@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>【热门】iEnglish4平板思路</title>
+      <link href="/2024/02/20/Post1/"/>
+      <url>/2024/02/20/Post1/</url>
+      
+        <content type="html"><![CDATA[<p><span style="color: red;">*本文系开发文档，Chen仅做了部分补充 </span><span id="more"></span></p><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本教程旨在分享刷机经验和技术知识，帮助读者自行定制设备以更好地满足个人需求。由于该教程的特殊性，任何人都应该了解以下事项：</p><ul><li><p>1.相关风险： <strong>刷机可能引发意外情况，包括但不限于数据丢失、设备故障等</strong>。在阅读本文前，请确保对此充分理解并自愿承担相关风险。</p></li><li><p>2.官方支持： 刷机可能导致 iEnglish4 学习平板 失去托普郎宁（北京）教育科技有限公司提供的官方支持。在刷机之前，请考虑这<strong>可能会对设备的保修和官方软件更新造成影响</strong>。</p></li><li><p>3.法律责任：  本教程并未包括任何对托普郎宁（北京）教育科技有限公司“iEng英语模拟系统”进行破解或类似操作的内容。笔者郑重声明，对于读者在刷机过程中可能产生的任何法律责任，笔者概不负责。</p></li><li><p>4.相关数据： 由于笔者技术有限，在<strong>第一次刷机时 iEnglish4 学习平板 上的数据将全部丢失</strong>，笔者对此概不负责。</p></li></ul><p>在根据此教程进行刷机操作前，请确保已阅读并理解上述声明，并同意自行承担相关风险和责任。</p><h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><ul><li>下载工具集配置电脑（笔记末尾）</li><li>建议配置完环境后重启一次电脑</li><li>本文所指</li></ul><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>Win10&#x2F;Win11电脑一台（请确保磁盘有足够空间 建议留出10g以上的剩余空间），数据线一根，iEnglish4平板（平板后盖附着进网许可印有“9011”字样）一台</p><h1 id="基础教程"><a href="#基础教程" class="headerlink" title="基础教程"></a>基础教程</h1><h2 id="1-解bl"><a href="#1-解bl" class="headerlink" title="1.解bl"></a>1.解bl</h2><p>先进入mtk universal v5那个文件夹，打开里面krypton开头的exe，点bootloader unlock，然后点start。这个时候确保平板已经完全关机，然后同时按住音量加减并迅速插线，0.5秒后可以松开按键<br>如果不出意外的话此时bl已经解开。如果工具报错的话就拔下平板并连接充电器，等屏幕上出现电池图标以后拔线。此时平板已经回到完全关机状态，<br>记得关掉工具重新打开然后再试一遍。</p><h2 id="2-提取system和boot"><a href="#2-提取system和boot" class="headerlink" title="2.提取system和boot"></a>2.提取system和boot</h2><p>打开mtkclient-1.52文件夹，在文件管理器窗口空白处右键，然后点右键菜单里的在此处打开命令窗口，（关于Python：第一次运行需输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python setup.py install</span><br></pre></td></tr></table></figure><p>并回车然后等待环境安装完成微软商店下载Python的无需执行此步）（关于工具：第一次运行需输入pip3 install -r requirements.txt并回车等待环境安装完成，再进行下一步操作）输入python mtk r system,boot system.img,boot.img<br>并回车，输完指令后像第一步一样按音量上下键同时插线连接平板，等待进度条走完即可成功提取boot和system分区（如果工具报错请尝试重新打开命令窗口或者重启电脑，记得先像第一步里充电让平板回到完全关机）。提取出来的文件在mtkclient-1.52这个文件夹里。</p><h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2><p>下载新系统文件链接：<a href="https://www.123pan.com/s/hXOrVv-v2SK3%E6%8F%90%E5%8F%96%E7%A0%81%EF%BC%9AH5TC4%EF%BC%88%E6%96%87%E6%9C%AB%E4%B9%9F%E6%9C%89%EF%BC%89">https://www.123pan.com/s/hXOrVv-v2SK3提取码：H5TC4（文末也有）</a><br>刷入新的system.img下载完的系统文件改名<br>system.img将system.img移动到mtkclient-1.52文件夹开始刷入：打开mtkclient-1.52文件夹，在窗口空白处右键，点右键菜单里的在此处打开命令窗口，然后输入python mtk w system system.img然后回车 刷入system分区，输完指令后像第一步一样按音量键同时插线连接平板，等待进度条走完即可（如果工具报错请尝试重新打开命令窗口或者重启电脑，记得先像第一步里充电让平板回到完全关机）。刷完了切记不要马上拔线开机，要先清空所有数据。</p><h1 id="进阶玩机"><a href="#进阶玩机" class="headerlink" title="进阶玩机"></a>进阶玩机</h1><h2 id="1-刷入Magisk获取Root权限"><a href="#1-刷入Magisk获取Root权限" class="headerlink" title="1.刷入Magisk获取Root权限"></a>1.刷入Magisk获取Root权限</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>智能电脑：融合科技与现代的未来之源</title>
+      <link href="/2024/02/19/test%E6%96%87%E7%AB%A02/"/>
+      <url>/2024/02/19/test%E6%96%87%E7%AB%A02/</url>
+      
+        <content type="html"><![CDATA[<p><span style="color: gray;">*本文系测试文章，由ChatGPT生成，内容仅供参考！</span><span id="more"></span></p><p><img src="https://i1.mifile.cn/f/i/2019/redmibook14/intro.jpg" alt="智能电脑"></p><p>智能电脑在当今科技潮流中扮演着至关重要的角色。随着技术的飞速发展，智能电脑不仅是我们工作和学习的得力助手，更是科技与现代风格完美融合的象征。</p><h2 id="科技的威力"><a href="#科技的威力" class="headerlink" title="科技的威力"></a>科技的威力</h2><p>智能电脑是科技进步的明证。强大的处理器、高效的存储系统、智能化的操作系统，这些技术突破将电脑推向了一个新的高度。无论是进行复杂的数据分析还是畅玩高性能游戏，智能电脑都展现出强大的计算能力，为用户提供了更加便捷、高效的体验。</p><h2 id="设计的现代感"><a href="#设计的现代感" class="headerlink" title="设计的现代感"></a>设计的现代感</h2><p>除了强大的技术配置，智能电脑在设计上也充满了现代感。轻薄的机身、时尚的金属材质、全面屏设计，这些都是现代电脑设计的典范。现代风格的设计不仅注重外观的美感，更追求简洁、高效的使用体验。</p><h2 id="数字生活的引领者"><a href="#数字生活的引领者" class="headerlink" title="数字生活的引领者"></a>数字生活的引领者</h2><p>智能电脑在数字生活中扮演着引领者的角色。从远程办公到虚拟现实体验，智能电脑为用户提供了全新的数字化体验。现代人的生活离不开电脑，而智能电脑则以其多功能性和高度可定制性成为现代生活的不可或缺的一部分。</p><h2 id="未来愿景"><a href="#未来愿景" class="headerlink" title="未来愿景"></a>未来愿景</h2><p>随着科技的不断发展，智能电脑的未来充满了无限可能。更快速的处理器、更智能的人工智能、更先进的互联技术，这些都将成为未来智能电脑的发展方向。而现代风格的设计将继续在电脑领域中占据主导地位，为用户带来更加时尚、现代的使用体验。</p><p>总的来说，智能电脑不仅是科技的巅峰之作，更是现代生活的引领者。它在不断创新中演绎着科技与现代的完美融合，为我们的数字化生活注入了新的活力。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ChatGPT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>致读者</title>
+      <link href="/2024/02/18/donation/"/>
+      <url>/2024/02/18/donation/</url>
+      
+        <content type="html"><![CDATA[<h1 id="感谢您的支持！"><a href="#感谢您的支持！" class="headerlink" title="感谢您的支持！"></a><strong>感谢您的支持！</strong></h1><p>您好亲爱的读者，</p><p>感谢您访问我的博客并阅读我的文章。<span id="more"></span>如果这里的内容对您有所帮助或启发，我想邀请您考虑通过捐赠来支持我的创作。您的慷慨将帮助我维持这个博客并继续分享内容。</p><h2 id="捐赠的理由？"><a href="#捐赠的理由？" class="headerlink" title="捐赠的理由？"></a><strong>捐赠的理由？</strong></h2><ul><li>🌟 <strong>支持我：</strong> 您的捐赠是对我的认可，是我创作的动力之一。</li><li>💡 <strong>促进内容质量：</strong> 捐赠可以帮助我提高博客的质量，以便为您提供更丰富的内容。</li><li>🚀 <strong>推动博客发展：</strong> 您的支持将有助于博客的不断改进和持续发展，使其更好地满足您的期望。</li></ul><h2 id="如何捐赠？"><a href="#如何捐赠？" class="headerlink" title="如何捐赠？"></a><strong>如何捐赠？</strong></h2><p>感谢您考虑支持我。以下是一些捐赠选项：</p><ul><li><strong>1：</strong> <a href="https://cdn.jsdelivr.net/gh/HongkeChen/camellia/phone/wechat.jpg">微信支付</a></li><li><strong>2：</strong> <a href="https://cdn.jsdelivr.net/gh/HongkeChen/camellia/phone/zfb.jpg">支付宝</a></li></ul><p>或直接扫描以下二维码，用您的爱心支持创作：</p><table><thead><tr><th>微信支付</th><th>支付宝</th></tr></thead><tbody><tr><td><img src="https://cdn.jsdelivr.net/gh/HongkeChen/camellia/phone/wechat.jpg" alt="微信" style="width:100%; padding:0;"></td><td><img src="https://cdn.jsdelivr.net/gh/HongkeChen/camellia/phone/zfb.jpg" alt="支付宝" style="width:100%; padding:0;"></td></tr></tbody></table><h2 id="您的支持是我的动力！"><a href="#您的支持是我的动力！" class="headerlink" title="您的支持是我的动力！"></a><strong>您的支持是我的动力！</strong></h2><p>再次感谢您的光临和支持。无论您捐赠与否，我都感到非常感激。如果您有任何想法或建议，也欢迎与我分享。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 置顶 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我是谁？</title>
+      <link href="/2024/02/18/about/"/>
+      <url>/2024/02/18/about/</url>
+      
+        <content type="html"><![CDATA[<p>你好！<strong>我是Chen</strong>，一名喜欢上网的学生。欢迎来到我的blog。<span id="more"></span><br>我是一位发烧友，对玩机有着浓厚的兴趣。在互联网的探索之旅十分令人难忘，我在这个互联网中获得了一些个人的见解。</p><h2 id="现阶段"><a href="#现阶段" class="headerlink" title="现阶段"></a><strong>现阶段</strong></h2><p>目前，我还处于自己的学习和成长的阶段。虽然我还未步入职场，但我在不断地拓展自己的知识和技能。我对未来充满了憧憬和期待，并在日常生活中积极参与课外活动，以丰富自己的经验。</p><h2 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a><strong>我的爱好</strong></h2><p>在学业之余，我热衷于<del style="color:gray">刷机</del><strong>对智能设备进行定制优化</strong>，涉及 Qualcomm Snapdragon 、MediaTek 甚至 Huawei Kirin 等处理器。你经常能在酷安发现我的探索足迹。我对各种智能设备都保持着浓厚的兴趣，深度挖掘和优化智能设备，感受科技的魅力。除了这种高度技术性的优化，我还对一切可爱的事物充满喜爱。</p><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a><strong>联系方式</strong></h2><p>如果有任何问题或想与我联系，可以随时在社交媒体上与我联系：</p><ul><li><strong><a href="https://0.0.0.1/">A</a></strong></li><li><strong><a href="https://0.0.0.2/">B</a></strong></li><li><strong><a href="https://0.0.0.3/">C</a></strong></li></ul><p>或者通过邮件联系我：</p><ul><li><strong><a href="mailto:&#x65;&#109;&#x61;&#105;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#109;">&#x65;&#109;&#x61;&#105;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#111;&#109;</a></strong>。</li></ul><h2 id="推荐文章"><a href="#推荐文章" class="headerlink" title="推荐文章"></a><strong>推荐文章</strong></h2><p>在我的博客中，你可以阅读一些原创文章：</p><ul><li><a href="%E9%93%BE%E6%8E%A5%E5%88%B0%E6%96%87%E7%AB%A01">文章1标题</a></li><li><a href="%E9%93%BE%E6%8E%A5%E5%88%B0%E6%96%87%E7%AB%A02">文章2标题</a></li><li><a href="%E9%93%BE%E6%8E%A5%E5%88%B0%E6%96%87%E7%AB%A03">文章3标题</a></li></ul><h2 id="捐赠"><a href="#捐赠" class="headerlink" title="捐赠"></a><strong>捐赠</strong></h2><p>如果你喜欢我的博客内容，考虑为维护博客提供一些支持。你的捐赠将帮助我继续创作有趣的内容。谢谢！</p><ul><li><strong>1：</strong> <a href="https://cdn.jsdelivr.net/gh/HongkeChen/camellia/phone/wechat.jpg">微信支付</a></li><li><strong>2：</strong> <a href="https://cdn.jsdelivr.net/gh/HongkeChen/camellia/phone/zfb.jpg">支付宝</a></li></ul><p>或直接扫描以下二维码，用您的爱心支持创作：</p><table><thead><tr><th>微信支付</th><th>支付宝</th></tr></thead><tbody><tr><td><img src="https://cdn.jsdelivr.net/gh/HongkeChen/camellia/phone/wechat.jpg" alt="微信" style="width:100%; padding:0;"></td><td><img src="https://cdn.jsdelivr.net/gh/HongkeChen/camellia/phone/zfb.jpg" alt="支付宝" style="width:100%; padding:0;"></td></tr></tbody></table>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 置顶 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>智能手机：科技风潮中的时尚利器</title>
+      <link href="/2024/02/18/test%E6%96%87%E7%AB%A01/"/>
+      <url>/2024/02/18/test%E6%96%87%E7%AB%A01/</url>
+      
+        <content type="html"><![CDATA[<p><span style="color: gray;">*本文系测试文章，由ChatGPT生成，内容仅供参考！</span><span id="more"></span></p><p><img src="https://cdn.cnbj1.fds.api.mi-img.com/product-images/xiaomi14proy4y29r/index/28064.png?x-fds-process=image/resize,q_90,f_webp" alt="智能手机"></p><p>智能手机已经成为我们日常生活中不可或缺的一部分。随着科技的不断进步，手机不仅仅是通讯工具，更是一种时尚的体现。在这个科技风潮中，智能手机以其创新设计和强大功能成为了时尚利器。</p><h2 id="科技的魅力"><a href="#科技的魅力" class="headerlink" title="科技的魅力"></a>科技的魅力</h2><p>科技的不断演进给智能手机带来了无限可能。强大的处理能力、高清的摄像头、智能化的操作系统，这些技术突破让手机变得更加智能化和多功能化。我们的生活得以更加便捷，而这也使得智能手机在科技爱好者中变得越来越受欢迎。</p><h2 id="设计的艺术"><a href="#设计的艺术" class="headerlink" title="设计的艺术"></a>设计的艺术</h2><p>除了强大的技术配置，智能手机在设计上也有着引人注目的艺术风格。轻薄的机身、玻璃背板、全面屏设计，这些都展示了手机制造商在设计上的用心。蓝色调的机身更是给手机增添了一份时尚感，使其成为了一件艺术品。</p><h2 id="摄影的新时代"><a href="#摄影的新时代" class="headerlink" title="摄影的新时代"></a>摄影的新时代</h2><p>随着智能手机摄像头的不断升级，我们进入了摄影的新时代。从日常的拍照到专业级的摄影，智能手机已经可以满足各种摄影需求。而蓝色的机身在拍摄时更显得时尚别致，使每一张照片都变得更加引人入胜。</p><h2 id="未来展望"><a href="#未来展望" class="headerlink" title="未来展望"></a>未来展望</h2><p>随着科技的不断发展，智能手机的未来将更加令人期待。更强大的处理器、更先进的摄像技术、更智能的人工智能助手，这些都将成为未来智能手机的发展方向。而蓝色的设计将继续在时尚界占据一席之地，成为科技与时尚完美结合的代表。</p><p>总的来说，智能手机不仅是科技的象征，更是时尚的标志。它在不断创新中演绎着科技与时尚的完美融合，为我们的生活带来了更多的可能性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ChatGPT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2024/02/18/hello-world/"/>
+      <url>/2024/02/18/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p><span style="color: gray;">*本文系开发文档，Chen仅做了部分补充 </span><span id="more"></span><br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>欢迎来到 Hexo ！这是你的第一篇文章。有关详细信息，请查看文档。如果你在使用 Hexo 时遇到任何问题，你可以在故障排除中找到答案，也可以在 GitHub 上问我。</p><h1 id="Quick-Start-快速入门"><a href="#Quick-Start-快速入门" class="headerlink" title="Quick Start 快速入门"></a><strong>Quick Start 快速入门</strong></h1><p>Create a new post 创建新帖子</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><p>Run server 启动预览</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><p>Generate static files 生成页面</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><p>Deploy to remote sites 上传部署</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p>补充内容：清除缓存文件等</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/">无</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
